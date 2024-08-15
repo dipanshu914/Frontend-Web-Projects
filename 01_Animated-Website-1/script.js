@@ -43,3 +43,22 @@ var swiper = new Swiper(".mySwiper", {
 	centeredSlides: true,
 	spaceBetween: 10,
 });
+
+let menu = document.querySelector("#menu h3");
+let fullscr = document.querySelector("#full-src");
+let Navimg = document.querySelector("nav img");
+let flag = 0;
+
+menu.addEventListener("click", Menuopen);
+
+function Menuopen() {
+	if (flag == 0) {
+		fullscr.style.top = 0;
+		Navimg.style.opacity = 0;
+		flag = 1;
+	} else {
+		fullscr.style.top = "-100%";
+		Navimg.style.opacity = 1;
+		flag = 0;
+	}
+}
